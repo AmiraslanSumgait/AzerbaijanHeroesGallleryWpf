@@ -1,0 +1,105 @@
+﻿<Window x:Class="AzerbaijanHeroesGallery.PropertyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AzerbaijanHeroesGallery"
+        mc:Ignorable="d"
+        Title="PropertyWindow" Height="450" Width="800"   ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterOwner" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Grid Background="{StaticResource SpecialGradient}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Button Background="Transparent" 
+                    Width="40" 
+                    BorderThickness="0"
+                    Click="Button_Click"
+                    Template="{DynamicResource withoutMouseOver}"
+                  >
+                <Image Source="Images/back (2).png">
+                </Image>
+            </Button>
+            <TextBlock Name="nameTxtBlk" 
+                       Width="620" 
+                       FontSize="30" 
+                       Margin="10,0,0,0" 
+                       Foreground="{StaticResource  RedGradientBrush}">
+            </TextBlock>
+            <TextBlock Name="dateTxtBlk" 
+                       Width="120" 
+                       FontSize="25" 
+                       Foreground="{StaticResource CyanGradientBrush}" 
+                       VerticalAlignment="Bottom"
+                       >
+            </TextBlock>
+        </StackPanel>
+        <Image x:Name="mainImage" 
+               Grid.Row="1"></Image>
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal" 
+                    >
+            <TextBlock x:Name="descriptionTxtb" 
+                       Width="650" 
+                       TextWrapping="Wrap" 
+                       FontSize="16" 
+                       Margin="5,0,0,0" 
+                       Foreground="{StaticResource RedGradientBrush}"
+                       >
+            </TextBlock >
+            <TextBlock x:Name="priceTxtb" 
+                       FontSize="18"
+                       Width="auto"
+                       Margin="20,0,0,0"
+                       Foreground="{StaticResource  OrangeGradientBrush}"
+                       VerticalAlignment="Bottom"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="3" 
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Center">
+            <Button x:Name="prevBtn" 
+                    Width="50" 
+                    Margin="10" 
+                    Content="Prev" 
+                    Foreground="{StaticResource BlueGradientBrush}" 
+                    HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Center" 
+                    Style="{DynamicResource ButtonStyle}"
+                    Click="prevBtn_Click"></Button>
+            <Button x:Name="pauseBtn" 
+                    Width="50" 
+                    Margin="10" 
+                    Content="Pause" 
+                    Foreground="{StaticResource BlueGradientBrush}" 
+                    HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Center" 
+                     Style="{DynamicResource ButtonStyle}"
+                    Click="pauseBtn_Click"></Button>
+            <Button x:Name="autoPlayBtn"
+                    Width="50" 
+                    Margin="10" 
+                    Content="Play" 
+                    Foreground="{StaticResource BlueGradientBrush}" 
+                    HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Center" 
+                   Style="{DynamicResource ButtonStyle}"
+                    Click="autoPlayBtn_Click">
+            </Button>
+            <Button x:Name="nextBtn" 
+                    Width="50" 
+                    Margin="10" 
+                    Content="Next" 
+                    Foreground="{StaticResource BlueGradientBrush}" 
+                    HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Center" 
+                    Style="{DynamicResource ButtonStyle}"
+                    Click="nextBtn_Click">
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

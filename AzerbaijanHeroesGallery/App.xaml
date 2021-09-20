@@ -1,0 +1,15 @@
+﻿<Application x:Class="AzerbaijanHeroesGallery.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:AzerbaijanHeroesGallery"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Gradient.xaml" ></ResourceDictionary>
+                <ResourceDictionary Source="ButtonStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Size.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
